@@ -1,79 +1,253 @@
+/* 🔤 FONTS (una sola importación limpia) */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* 🌍 BASE */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   color: white;
+  text-align: center;
+  overflow-x: hidden;
+  font-family: 'Playfair Display', serif;
 }
 
+
+/* 🎆 HERO */
 .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  animation: fadeIn 2s ease-in;
+  justify-content: flex-end;
+  animation: fadeIn 2s ease;
+  height: 100vh;
+  padding-bottom: 50px;
+  background-image: url('imgs/img-inicio.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
-.info, .contador {
-  padding: 40px;
-  animation: slideUp 1.5s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}body {
+.index-quince {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 4.5rem;
+  letter-spacing: 6px;
+  font-weight: 500;
   margin: 0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  color: white;
+  text-transform: uppercase;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: fadeIn 2s ease-in;
-}
-
-h1 {
+.name-index {
+  font-family: 'Great Vibes', cursive;
   font-size: 4rem;
+  margin: 0;
 }
 
-.info, .contador {
-  padding: 40px;
-  animation: slideUp 1.5s ease;
+
+/* 📄 INFO */
+.info {
+  background-color: #FED4E7;
+  color: #ffffff;
+  text-align: center;
+  padding: 70px 50px;
+  /* Franjas grises/beige usando bordes */
+  border-top: 50px solid #ffffff;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
+.where {
+  color: #F9B9B7;
+  text-align: center;
+  padding: 70px 50px;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.date-street {
+
+}
+
+/* ⏳ CONTADOR */
+.countdown-box {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.time {
+  background-color: #FFCAE9;
+}
+
+.time span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.time p {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  margin: 5px 0 0;
+}
+
+
+/* ⏺️ PUNTOS */
+.dots {
+  font-size: 2rem;
+  align-self: center;
+  opacity: 0.6;
+  animation: blink 1s infinite;
+}
+
+/* BOTON *//* BOTON */
+.btn-quince {
+    position: relative;
+    display: inline-block;
+    padding: 16px 45px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    border: 1px solid;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #F9B9B7;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+/* TEXTO arriba del efecto */
+.btn-quince span {
+    position: relative;
+    z-index: 2;
+}
+
+/* EFECTO DESLIZANTE */
+.btn-quince::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-acento);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+/* HOVER */
+.btn-quince:hover::before {
+    transform: translateX(0);
+}
+
+.btn-quince:hover {
+    color: var(--color-texto-hover);
+    box-shadow: 0 8px 15px rgba(108, 91, 123, 0.2);
+    transform: translateY(-3px);
+}
+
+/* CLICK */
+.btn-quince:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(108, 91, 123, 0.1);
+}
+/* ✨ ANIMACIONES */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
   from {
-    transform: translateY(50px);
     opacity: 0;
   }
+
   to {
-    transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .index-quince {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .name-index {
+    font-size: 3rem;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .countdown-box {
+    gap: 8px;
+  }
+
+  .time {
+    min-width: 55px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .time span {
+    font-size: 2rem;
+  }
+
+  .time p {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .info {
+    padding: 5rem;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.7rem 0 0.5rem 0;
+  }
+
+  .date {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+
+  .tiempo {
+    margin: 0%;
   }
 }
