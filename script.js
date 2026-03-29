@@ -27,3 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+function abrirModal() {
+  document.getElementById("modal").style.display = "flex";
+}
+
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(e) {
+  const modal = document.getElementById("modal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+}
