@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     spaceBetween: 15, 
     autoplay: {
-      delay: 3000,
+      delay: 2000,
     },
   });
 });
