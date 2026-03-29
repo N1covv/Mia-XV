@@ -51,7 +51,6 @@ body {
   color: black;
   text-align: center;
   padding: 70px 50px;
-  /* Franjas grises/beige usando bordes */
   border-top: 50px solid #ffffff;
   box-sizing: border-box;
   font-family: "Red Hat Text", sans-serif;
@@ -70,7 +69,7 @@ body {
 }
 
 .dress {
-  background-color: #FFE8D1;
+  background-color: #D7CDCC;
   color: black;
   text-align: center;
   padding: 70px 50px;
@@ -81,6 +80,16 @@ body {
   font-style: normal;
 }
 
+.instagram {
+  background-color: #FED4E7;
+  color: black;
+  text-align: center;
+  padding: 70px 50px;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 
 /* ⏳ CONTADOR */
 .countdown-box {
@@ -123,17 +132,17 @@ body {
   position: relative;
   display: inline-block;
   padding: 16px 45px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 13px;
-  border: 1px solid;
-  border-radius: 50px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  background-color: #F9B9B7;
+  background-color: #FED4E7;
   z-index: 1;
   transition: all 0.4s ease;
+  font-weight: 500;
 }
 
 /* TEXTO arriba del efecto */
@@ -219,6 +228,7 @@ body {
   font-style: normal;
 }
 
+
 .btn-whatsapp {
   position: relative;
   display: inline-block;
@@ -231,7 +241,7 @@ body {
   border: 1px solid;
   border-radius: 50px;
   overflow: hidden;
-  background-color: #F9B9B7;
+  background-color: #FED4E7;
   z-index: 1;
   transition: all 0.4s ease;
 }
@@ -264,6 +274,57 @@ body {
   }
 }
 
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.flotar {
+  animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.girar {
+  animation: girar 3s linear infinite;
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+.wiggle {
+  animation: wiggle 1s infinite;
+}
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
@@ -310,13 +371,22 @@ body {
   .info {
     padding: 5rem;
     font-size: 20px;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
   }
 
   .title {
     font-size: 1.5rem;
     font-weight: 500;
     margin: 0.7rem 0 0.5rem 0;
+    letter-spacing: 1px;
+  }
+
+  .tiempo {
+    font-size: 1rem;
+  }
+
+  .date-street {
+    margin: 0.3rem 0 2rem 0;
   }
 
   .title-dress {
@@ -357,6 +427,25 @@ body {
 
   .confirmacion-text {
     margin: 0.3rem 0 2rem 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
+
+  .ig-user {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.7rem 0 0.1rem 0;
+  }
+
+  .ig-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .ig-txt {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
 }

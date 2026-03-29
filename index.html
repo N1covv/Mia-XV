@@ -51,12 +51,13 @@
   <section>
 
     <div class="info">
-      <i class="fa-regular fa-calendar"></i>
+      <i data-lucide="calendar-1" style="width: 50px; height: 50px; stroke-width: 1;" class="wiggle"></i>
       <h2 class="title">¿CUÁNDO?</h2>
       <p class="date">16 DE MAYO 2026</p>
       <p class="tiempo">| 21:30 HS |</p>
     </div>
     <div class="where">
+      <i data-lucide="map-pin" style="width: 50px; height: 50px; stroke-width: 1;" class="flotar"></i>
       <h2 class="title">¿DONDE?</h2>
       <p class="date">GRISEL EVENTOS</p>
       <p class="date-street">Fabian Onsari 839 - Wilde</p>
@@ -97,7 +98,7 @@
 
   <section>
     <div class="dress">
-      <i class="icono fa-solid fa-shirt"></i>
+      <img src="imgs/dress-code.png" alt="" style="width: 6rem ; height: 6rem;">
       <h2 class="title-dress">DRESS CODE</h2>
       <p class="date-dress">ELEGANTE</p>
     </div>
@@ -105,15 +106,31 @@
 
   <section class="confirmacion">
     <h2 class="confirmacion-title">CONFIRMAR ASISTENCIA</h2>
-    <p class="confirmacion-text">Con este botón podrás confirmar tu asistencia e informar sobre tus restricciones y/o alergias relacionadas a los alimentos.</p>
-    <a class="btn-whatsapp" href="https://wa.me/5491130061066?text=%C2%A1Confirmo%20mi%20asistencia%20a%20la%20fiesta%20de%20Mia!%0A%0AAprovecha%20%C3%A9ste%20espacio%20para:%0A1-%20Contarme%20si%20ten%C3%A9s%20alguna%20restricci%C3%B3n%20alimentaria:%20si%20sos%20cel%C3%ADaco,%20vegetariano,%20etc.%0A2-%20El%20tema%20de%20m%C3%BAsica%20que%20no%20puede%20faltar%20es..."
+    <p class="confirmacion-text">Con este botón podrás confirmar tu asistencia e informar sobre tus restricciones y/o
+      alergias relacionadas a los alimentos.</p>
+    <a class="btn-whatsapp"
+      href="https://wa.me/5491130061066?text=%C2%A1Confirmo%20mi%20asistencia%20a%20la%20fiesta%20de%20Mia!%0A%0AAprovecha%20%C3%A9ste%20espacio%20para:%0A1-%20Contarme%20si%20ten%C3%A9s%20alguna%20restricci%C3%B3n%20alimentaria:%20si%20sos%20cel%C3%ADaco,%20vegetariano,%20etc.%0A2-%20El%20tema%20de%20m%C3%BAsica%20que%20no%20puede%20faltar%20es..."
       target="_blank">
       CONFIRMAR
     </a>
   </section>
 
+  <section class="instagram">
+    <i class="fa-brands fa-instagram" style="width: 100px; height: 50px; color:black;"></i>
+    <h2 class="ig-user">@miu.vrn</h2>
+    <p class="ig-title">¡Preparate para esta gran fiesta!</p>
+    <p class="ig-txt">Seguime en mi cuenta de Instagram y etiquetame en tus fotos y videos.</p>
+  </section>
+
+  <footer style="background-color: bisque;">
+    <p>as</p>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 
 </html>
