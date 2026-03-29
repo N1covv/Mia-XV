@@ -1,23 +1,29 @@
-// ⏳ CONTADOR
-const eventDate = new Date(2026, 4, 16, 21, 30, 0).getTime();
+document.addEventListener("DOMContentLoaded", () => {
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = eventDate - now;
+  // CONTADOR
+  const eventDate = new Date(2026, 4, 16, 21, 30, 0).getTime();
 
-  if (distance < 0) {
-    document.querySelector(".countdown-box").innerHTML = "🎉 ¡Llegó el gran día!";
-    return;
-  }
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((distance / 1000 / 60) % 60);
-  const seconds = Math.floor((distance / 1000) % 60);
+    if (distance < 0) {
+      document.querySelector(".countdown-box").innerHTML = "🎉 ¡Llegó el gran día!";
+      return;
+    }
 
-  document.getElementById("DIAS").innerText = days;
-  document.getElementById("HORAS").innerText = hours;
-  document.getElementById("MINUTOS").innerText = minutes;
-  document.getElementById("SEGUNDOS").innerText = seconds;
+    document.getElementById("DIAS").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("HORAS").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    document.getElementById("MINUTOS").innerText = Math.floor((distance / 1000 / 60) % 60);
+    document.getElementById("SEGUNDOS").innerText = Math.floor((distance / 1000) % 60);
+  }, 1000);
 
-}, 1000);
+  // SLIDER
+  const swiper = new Swiper(".mi-slider", {
+    loop: true,
+    spaceBetween: 15, 
+    autoplay: {
+      delay: 3000,
+    },
+  });
+});
