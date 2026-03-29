@@ -42,3 +42,17 @@ window.onclick = function(e) {
     modal.style.display = "none";
   }
 }
+
+
+const audio = document.getElementById("musica");
+const icono = document.getElementById("icono-musica");
+
+function toggleMusica() {
+  if (audio.paused) {
+    audio.play();
+    icono.className = "bi bi-pause-fill";
+  } else {
+    audio.pause();
+    icono.className = "bi bi-play-fill";
+  }
+}

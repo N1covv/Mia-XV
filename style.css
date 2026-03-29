@@ -11,7 +11,27 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+.btn-musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #FED4E7;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
+.btn-musica:hover {
+  transform: scale(1.1);
+}
+
+.btn-musica i {
+  font-size: 25px;
+  color: #000;
+}
 /* 🎆 HERO */
 .hero {
   display: flex;
@@ -219,6 +239,25 @@ body {
   background: #1ebe5d;
 }
 
+
+.btn-quince-gift {
+  position: relative;
+  display: inline-block;
+  padding: 16px 45px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #FED4E7;
+  z-index: 1;
+  transition: all 0.4s ease;
+  font-weight: 400;
+    border: none;
+  outline: none
+}
 
 /* ---------------------- SLIDER  ------------------------------------*/
 .swiper {
